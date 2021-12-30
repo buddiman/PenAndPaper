@@ -1,0 +1,27 @@
+<Project Sdk="Godot.NET.Sdk/3.3.0">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>9</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Crunch\**" />
+    <Compile Remove="Crunch.Test\**" />
+    <Compile Remove="Gamemaster\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Crunch\**" />
+    <EmbeddedResource Remove="Crunch.Test\**" />
+    <EmbeddedResource Remove="Gamemaster\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Crunch\Crunch.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Network" Version="6.2.5.23" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+  </ItemGroup>
+</Project>
